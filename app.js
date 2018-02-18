@@ -215,11 +215,9 @@ let port = parseInt(process.env.PORT || 3000);
 app.set('port', port);
 let server = http.createServer(app);
 
-db.migrate.latest()
-  .then(() => {
-    server.listen(app.get('port'));
-    console.log(`Listening on port: '${ app.get('port') }'.`);
-  });
+db.migrate.latest();
+server.listen(app.get('port'));
+console.log(`Listening on port: '${ app.get('port') }'.`);
 
 
 // Extra methods
