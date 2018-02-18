@@ -1,6 +1,7 @@
 // Env variables
 require('dotenv').config();
 
+console.log(process.env.PORT);
 
 // Library consts
 let express    = require('express');
